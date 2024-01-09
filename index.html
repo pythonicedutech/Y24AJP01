@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Certificate</title>
+    <title>Certificate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         .header {
             position: relative;
@@ -45,11 +47,21 @@
             color: black; 
             border: 2px solid #4CAF50;
         }
+        @media only screen and (max-width: 600px) {
+            .pdf-object {
+                width: 90%;
+                height: 90%;
+            }
+            .logo {
+                width: 30%;
+            }
+        }
+        
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="Pythonic Edutech-logos_black.png" alt="Logo" class="logo">
+        <img src="Pythonic Edutech-logos_black.png" style="max-width:100%; height:auto;" alt="Logo" class="logo">
     </div>
     <div class="center">
         <object class="pdf-object" data="certificateAish.pdf" type="application/pdf">
