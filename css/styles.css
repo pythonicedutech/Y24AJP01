@@ -3839,6 +3839,129 @@ img.u-pull-left {
 }
 
 
+
+/* ===================================================================
+* # PDF
+*
+*
+* ------------------------------------------------------------------- */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    flex-direction: column;
+}
+
+.pdf-object {
+    width: 70%;
+    height: 70%;
+}
+
+/*Download button*/
+
+.d-btn {
+    background: #ffffff;
+    border: solid 1px #e6e6e6;
+    border-radius: 2px;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.d-btn-text, .d-btn-text-alt {
+    background: #f2594b;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5px 10px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.d-btn-text-alt {
+    margin-left: -20px;
+}
+
+.d-btn:before,
+.d-btn:after {
+    background: #ffffff;
+    border: solid 3px #9fb4cc;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin: -17px 0 0 -12px;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+}
+
+.d-btn:hover:before,
+.d-btn:hover:after {
+    background: #e2e8f0;
+}
+
+.d-btn:before {
+    margin: -23px 0 0 -5px;
+}
+
+.d-btn:hover {
+    background: #e2e8f0;
+    border-color: #9fb4cc;
+}
+
+.d-btn:active {
+    background: #dae0e8;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+.d-btn-text {
+    display: none;
+}
+
+.d-btn:hover .d-btn-text {
+    display: inline-block;
+}
+
+.d-btn:hover .d-btn-text-alt {
+    display: none;
+}
+
+/* ===================================================================
+* # PDF Responsive
+*
+*
+* ------------------------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+    .pdf-object {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .d-btn {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+
+
 /* ===================================================================
 * # PORTFOLIO
 *
@@ -4644,100 +4767,5 @@ img.u-pull-left {
         height : var(--vspace-1_5);
         width  : var(--vspace-1_5);
     }
-}
-
-/*PDF*/
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130vh;
-    flex-direction: column;
-}
-
-.pdf-object {
-    width: 70%;
-    height: 70%;
-}
-
-/*Download button*/
-
-.d-btn {
-    background: #ffffff;
-    border: solid 1px #e6e6e6;
-    border-radius: 2px;
-    display: inline-block;
-    height: 100px;
-    line-height: 100px;
-    margin: 5px;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    width: 100px;
-}
-
-.d-btn-text, .d-btn-text-alt {
-    background: #f2594b;
-    border-radius: 4px;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: normal;
-    padding: 5px 10px;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 1;
-}
-
-.d-btn-text-alt {
-    margin-left: -20px;
-}
-
-.d-btn:before,
-.d-btn:after {
-    background: #ffffff;
-    border: solid 3px #9fb4cc;
-    border-radius: 4px;
-    content: '';
-    display: block;
-    height: 35px;
-    left: 50%;
-    margin: -17px 0 0 -12px;
-    position: absolute;
-    top: 50%;
-    width: 25px;
-}
-
-.d-btn:hover:before,
-.d-btn:hover:after {
-    background: #e2e8f0;
-}
-
-.d-btn:before {
-    margin: -23px 0 0 -5px;
-}
-
-.d-btn:hover {
-    background: #e2e8f0;
-    border-color: #9fb4cc;
-}
-
-.d-btn:active {
-    background: #dae0e8;
-    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .25);
-}
-
-.d-btn-text {
-    display: none;
-}
-
-.d-btn:hover .d-btn-text {
-    display: inline-block;
-}
-
-.d-btn:hover .d-btn-text-alt {
-    display: none;
 }
 
