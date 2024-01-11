@@ -4542,59 +4542,92 @@ img.u-pull-left {
     margin       : 0;
 }
 
-/* ------------------------------------------------------------------- 
-* ## subscription form
-* ------------------------------------------------------------------- */
-.s-footer__subscribe {
+/* Subscription form */
+.column-item {
     --input-height : 7.2rem;
     --btn-width    : 180px;
 }
 
-.s-footer__subscribe h6 {
+.footer-subscribe h6 {
     margin-bottom : var(--vspace-0_75);
 }
 
-.s-footer__subscribe form {
+.form-class {
     display       : flex;
-    flex-flow     : row wrap;
+    flex-direction: column;
     margin-bottom : 0;
 }
 
-.s-footer__subscribe input[type="email"],
-.s-footer__subscribe input[type="submit"],
-.s-footer__subscribe .ms-status {
+.fullwidth,
+.message-textarea,
+.primary {
     flex : none;
+    width: 100%;
 }
 
-.s-footer__subscribe input[type="email"] {
+.fullwidth {
     --input-height   : 7.2rem;
-    width            : calc(100% - var(--btn-width));
-    background-color : var(--color-gray-6);
+    background-color : var(--color-1);
     color            : var(--color-text);
     border           : none;
     padding          : var(--input-vpadding) calc(2.8rem - 1px);
-    text-align       : left;
+    text-align       : Center;
     margin           : 0;
 }
 
-.s-footer__subscribe input[type="email"]:focus,
-.s-footer__subscribe input[type="email"]:hover {
+.fullwidth:focus,
+.fullwidth:hover {
     box-shadow : none;
 }
 
-.s-footer__subscribe input[type="submit"] {
+.primary {
     --btn-height : var(--input-height);
-    width        : var(--btn-width);
+    width        : var(--btn-width); /* Use the --btn-width variable */
     margin       : 0;
 }
 
-.s-footer__subscribe .mc-status {
+.mc-status {
     width       : 100%;
     margin-top  : var(--vspace-0_5);
     font-size   : var(--text-sm);
     font-weight : 400;
     color       : var(--color-1);
 }
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    .column-item {
+        --input-height : 5rem;
+        --btn-width    : 140px;
+    }
+
+    .primary {
+        width: 100%; /* Make the button full width on small screens */
+    }
+}
+
+/* Additional media queries for different screen sizes */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .column-item {
+        --input-height : 6rem;
+        --btn-width    : 160px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    .column-item {
+        --input-height : 6.5rem;
+        --btn-width    : 170px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .column-item {
+        --input-height : 7.2rem;
+        --btn-width    : 180px;
+    }
+}
+
 
 /* ------------------------------------------------------------------- 
 * ## footer social
@@ -4733,26 +4766,6 @@ img.u-pull-left {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .s-footer__subscribe form {
-        display : block;
-    }
-    
-    .s-footer__subscribe input[type="email"],
-    .s-footer__subscribe input[type="submit"] {
-        width      : 100%;
-        text-align : center;
-    }
-    
-    .s-footer__subscribe input[type="email"] {
-        margin-bottom : var(--vspace-0_625);
-    }
-    
-    .ss-go-top {
-        right  : var(--vspace-0_75);
-        bottom : var(--vspace-0_75);
-    }
-}
 
 @media screen and (max-width: 400px) {
     .s-footer__bottom-left {
